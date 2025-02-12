@@ -1,5 +1,5 @@
-// Exemplo de navegação com Link
-import Link from 'next/link';
+// // Exemplo de navegação com Link
+// import Link from 'next/link';
 import HeaderComponent from './components/header';
 import BannerCarousel from './components/banners';
 import FooterComponent from './components/footer';
