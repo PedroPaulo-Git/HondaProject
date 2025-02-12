@@ -3,7 +3,8 @@
 import React, { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import motosData from "../../../public/motos.json";
-export default function motosGrid() {
+
+export default function MotosGrid() {
   interface FichaTecnica {
     motor: string;
     cilindrada: string;
