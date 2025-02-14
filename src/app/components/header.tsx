@@ -17,7 +17,7 @@ const HeaderComponent = () => {
           <div className="flex items-center justify-between">
             <img
               src="/LogoToWhite.png"
-              className="w-[300px] lg:w-[500px] -m-10 2xl:-ml-20"
+              className="w-[300px] lg:w-[500px] -m-14 2xl:-ml-20"
             />
 
             <div className="lg:hidden my-auto mr-4">

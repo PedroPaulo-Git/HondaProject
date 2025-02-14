@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { IoIosArrowForward } from "react-icons/io";
 import motosData from "../../../public/motos.json";
 
@@ -40,10 +41,18 @@ export default function MotosGrid() {
   }
 
   const [motos, setMotos] = useState<Moto[]>([]);
+  const router = useRouter();
+
+  const handleClick = (nome: string) => {
+    const nomeFormatado = nome.toLowerCase().replace(/\s+/g, "-");
+    router.push(`/motos/${nomeFormatado}`);
+  };
+
   useEffect(() => {
-    // Carregar os dados do JSON
     setMotos(motosData);
   }, []);
+  
+
   return (
     <div className="px-0 mx-0 py-10 lg:px-9 2xl:px-0 bg-gray-200">
       <h1 className="font-bold text-black text-4xl ml-4 mb-4">
@@ -54,15 +63,16 @@ export default function MotosGrid() {
         {motos.map((moto) => (
           <div
             key={moto.id}
-            className="border p-4 rounded-lg shadow-sm text-center"
+            className="border p-4 rounded-lg shadow-sm text-center cursor-pointer"
+            onClick={() => router.push(`/motos/${moto.nome.toLowerCase().replace(/\s+/g, "-")}`)}
           >
-            <img src={moto.imagem} className="w-48 mx-auto cursor-pointer" alt="" />
+            <img src={moto.imagem} className="w-48 mx-auto" alt={moto.nome} />
             <h3 className="text-lg text-black font-semibold">{moto.nome}</h3>
-            <div className="" >
-              <a className="text-gray-600 flex my-4 justify-center items-center cursor-pointer">
+            <div className="">
+              <a onClick={() => handleClick(moto.nome)} className="text-gray-600 flex my-4 justify-center items-center"
+              >
                 <IoIosArrowForward className="text-red-700" />
-                <span className="text-sm">SAIBA MAIS
-                  </span>
+                <span className="text-sm">SAIBA MAIS</span>
               </a>
             </div>
           </div>
