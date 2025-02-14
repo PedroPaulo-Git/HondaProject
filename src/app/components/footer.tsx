@@ -25,8 +25,8 @@ const FooterComponent = () => {
       </div>
 
 
-      <div className="px-8 2xl:px-0">
-        <div className="p-4 pt-14">
+      <div className="px-8 2xl:px-0 ">
+        <div className="p-4 pt-14 text-sm w-full lg:text-base sm:w-8/12 md:w-10/12 lg:w-8/12  lg:ml-4">
           <div>
             <p className="mb-2">
               <strong>
@@ -95,8 +95,9 @@ const FooterComponent = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
           {/* Social Icons */}
-          <div className="w-full md:w-6/12 lg:w-3/12 lg:ml-4 order-1 lg:order-2">
-            <div className="flex justify-between items-center space-x-4">
+          <div className="w-full border-b-2 border-gray-300 mb-4 lg:border-none md:w-6/12 lg:w-3/12 lg:ml-4 order-1 lg:order-2 ">
+        
+            <div className="flex justify-between items-center space-x-4  mb-10 lg:mb-0">
               <a target="_blank">
                 <img className="w-6 h-6" src="/facebook.svg" alt="Facebook" />
               </a>
@@ -119,13 +120,13 @@ const FooterComponent = () => {
           </div>
 
           {/* Enterprise Info */}
-          <div className="w-full lg:w-8/12 order-2 lg:order-1">
+          <div className="w-full lg:w-8/12 order-2 lg:order-1 ">
             <div className="space-y-4">
               {/* Logos */}
               <div className="flex justify-between items-center w-full lg:w-6/12">
                 <a>
                   <img
-                    className="w-[600px] h-[170px] -m-14 -ml-24"
+                    className="w-[400px] h-[120px] lg:w-[600px] lg:h-[170px] -m-14 -ml-14 lg:-ml-24"
                     src="/LogoToWhite.png"
                     alt="Potiguar Honda"
                   />
@@ -140,8 +141,8 @@ const FooterComponent = () => {
               </div>
 
               {/* Enterprise Text */}
-              <div className="text-gray-600 text-sm">
-                <p>
+              <div className="text-gray-600 text-sm border-b-2 border-gray-300">
+                <p className="mb-8">
                   Os valores informados por nossas mídias digitais podem sofrer
                   variações decorrentes de: Data do fechamento do negócio;
                   Disponibilidade de estoque; Ano / Modelo; Especificações dos
@@ -155,7 +156,7 @@ const FooterComponent = () => {
               <div className="hidden lg:flex space-x-6 pb-6">
                 <a
                   className="flex items-center  font-semibold hover:underline"
-                  href="https://www.potiguar.com.br/fale-com-a-potiguar"
+                 
                 >
                   Contato{" "}
                   <img className="ml-2 w-4" src="/arrow-right-red.svg" />
@@ -163,14 +164,18 @@ const FooterComponent = () => {
                 <a
                   className="flex items-center  font-semibold hover:underline"
                   target="_blank"
-                  href="https://public.quevende.com.br/?company=Potiguar-Honda-uuided4476d9-4d59-40d5-a2f3-4d148f9f74b4"
                 >
                   Trabalhe Conosco{" "}
                   <img className="ml-2 w-4" src="/arrow-right-red.svg" />
                 </a>
               </div>
             </div>
+            <div className="my-8 text-sm px-10 text-center ">
+                        <span className="text-[#9B9B9B] ">Copyright © 2025 Potiguar Honda. Todos os direitos reservados.</span>
+                       
+                    </div>
           </div>
+         
         </div>
       </div>
     </section>
