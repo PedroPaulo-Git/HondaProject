@@ -83,7 +83,7 @@ export default function MotosGrid() {
         {motos.map((moto) => (
           <div
             key={moto.id}
-            className="border p-4 rounded-lg shadow-sm text-center cursor-pointer"
+            className="border p-4 rounded-lg shadow-sm text-center cursor-pointer flex flex-col justify-between"
             onClick={() =>
               router.push(
                 `/motos/${moto.nome.toLowerCase().replace(/\s+/g, "-")}`
@@ -91,7 +91,7 @@ export default function MotosGrid() {
             }
           >
             <img src={moto.imagem} className="w-48 mx-auto" alt={moto.nome} />
-            <h3 className="text-lg text-black font-semibold">{moto.nome}</h3>
+            <h3 className="text-base text-black font-semibold">{moto.nome}</h3>
             <div className="">
               <a
                 onClick={() => handleClick(moto.nome)}
