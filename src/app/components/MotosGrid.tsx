@@ -54,13 +54,20 @@ export default function MotosGrid() {
   }, []);
 
   return (
-    <div className="px-0 mx-0 py-10 lg:px-9 2xl:px-0 bg-gray-200">
-      <h1 className="font-bold text-black text-2xl lg:text-4xl ml-4 mb-4">
+    <div className="px-10 mx-0 py-16 lg:px-20  bg-gray-200">
+      <div className="flex items-center ">
+        <span className="w-6 h-0.5 bg-red-600">
+
+        </span>
+  <h1 className="font-bold text-black text-3xl lg:text-4xl ml-2">
         Nossos Veículos
       </h1>
+
+      </div>
+    
       <div className="mt-6 lg:flex items-center mb-4">
       <p className="text-gray-600 font-semibold mb-2 lg:mb-0 ml-4 ">Categorizar por:</p>
-      <div className="flex flex-wrap ml-1 lg:ml-4">
+      <div className="flex flex-wrap ml-1 lg:ml-4 gap-2">
         {categorias.map((categoria) => (
           <button
             key={categoria}
