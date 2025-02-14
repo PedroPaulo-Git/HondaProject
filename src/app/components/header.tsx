@@ -31,10 +31,13 @@ const HeaderComponent = () => {
                   </svg>
                 </button>
               </div>
+              <a href="/">
               <img
+
                 src="/LogoToWhite.png"
                 className="w-[300px] lg:w-[500px] -my-10 -ml-0 lg:-m-14 2xl:-ml-20 z-0"
               />
+              </a>
             </div>
             <span className="flex items-center gap-2 mr-4 sm:hidden">
               <IoLogoWhatsapp className="text-green-500 text-2xl" />
