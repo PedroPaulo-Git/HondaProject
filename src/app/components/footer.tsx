@@ -5,7 +5,7 @@ const FooterComponent = () => {
     <section id="footer" className=" text-black ">
       <div className=" bg-[#202020] py-16">
         <div className="flex flex-col justify-center items-center text-center space-y-8">
-          <h2 className="text-4xl font-bold text-white">
+          <h2 className="text-4xl px-4 lg:px-0 font-bold text-white">
             Prêmios Conquistados
           </h2>
           <ul className="flex mx-auto justify-center space-x-6">
