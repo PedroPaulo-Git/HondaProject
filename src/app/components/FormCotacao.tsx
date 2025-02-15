@@ -1,15 +1,26 @@
 import React, { useState } from 'react';
 
 const FormCotacao = () => {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState<string>('');
+  const [phone, setPhone] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
 
   // Função para garantir que só números sejam digitados no campo de telefone
-  const handlePhoneChange = (e: React.FormEvent) => {
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     // Remove qualquer caracter não numérico
-    const value = e.target.value.replace(/\D/g, '');
+    const value = (e.target as HTMLInputElement).value.replace(/\D/g, '');
     setPhone(value);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target as HTMLInputElement | HTMLTextAreaElement;
+    if (name === 'floating_name') {
+      setName(value);
+    } else if (name === 'floating_phone') {
+      setPhone(value);
+    } else if (name === 'floating_message') {
+      setMessage(value);
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -37,7 +48,7 @@ const FormCotacao = () => {
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-red-600 peer"
             placeholder=" "
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={handleInputChange}
             required
           />
           <label
@@ -77,7 +88,7 @@ const FormCotacao = () => {
             placeholder=" "
             rows={4}
             value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={handleInputChange}
             required
           />
           <label
