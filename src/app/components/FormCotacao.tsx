@@ -6,13 +6,13 @@ const FormCotacao = () => {
   const [message, setMessage] = useState('');
 
   // Função para garantir que só números sejam digitados no campo de telefone
-  const handlePhoneChange = (e:any) => {
+  const handlePhoneChange = (e: React.FormEvent) => {
     // Remove qualquer caracter não numérico
     const value = e.target.value.replace(/\D/g, '');
     setPhone(value);
   };
 
-  const handleSubmit = (e:any) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     const whatsappMessage = `Nome: ${encodeURIComponent(name)}%0ATelefone: ${encodeURIComponent(phone)}%0AMensagem: ${encodeURIComponent(message)}`;
