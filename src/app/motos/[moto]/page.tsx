@@ -5,32 +5,37 @@ import { useParams } from "next/navigation";
 import motosData from "../../../../public/motos.json";
 import HeaderComponent from "@/app/components/header";
 import FooterComponent from "@/app/components/footer";
-
+import WhatsappButton from "@/app/components/whatsappButton";
 interface FichaTecnica {
-  motor: string;
-  cilindrada: string;
-  potencia_maxima: string;
-  torque_maximo: string;
-  transmissao: string;
-  sistema_partida: string;
-  diametro_x_curso: string;
-  sistema_alimentacao: string;
-  combustivel: string;
-  tanque_combustivel: string;
-  oleo_motor: string;
-  dimensoes: string;
-  distancia_entre_eixos: string;
-  distancia_minima_solo: string;
-  altura_assento: string;
-  peso_seco: string;
-  chassi: string;
-  suspensao_dianteira: string;
-  suspensao_traseira: string;
-  freio_dianteiro: string;
-  freio_traseiro: string;
-  pneu_dianteiro: string;
-  pneu_traseiro: string;
+  motor?: string;
+  cilindrada?: string;
+  potencia_maxima?: string;
+  torque_maximo?: string;
+  transmissao?: string;
+  sistema_partida?: string;
+  diametro_x_curso?: string;
+  sistema_alimentacao?: string;
+  combustivel?: string; // Adicionado combustivel, conforme o dado
+  tanque_combustivel?: string;
+  oleo_motor?: string;
+  dimensoes?: string;
+  distancia_entre_eixos?: string;
+  distancia_minima_solo?: string;
+  altura_assento?: string;
+  peso_seco?: string;
+  chassi?: string;
+  suspensao_dianteira?: string;
+  suspensao_traseira?: string;
+  freio_dianteiro?: string;
+  freio_traseiro?: string;
+  pneu_dianteiro?: string;
+  pneu_traseiro?: string;
+  ignicao?: string;  // Agora opcional
+  bateria?: string;   // Agora opcional
+  farol?: string;     // Agora opcional
+  relacao_compressao?: string; // Adicionado relação de compressão
 }
+
 
 interface Moto {
   id: number;
@@ -43,6 +48,7 @@ interface Moto {
 type Aba = "motor" | "transmissao" | "combustivel" | "dimensoes" | "suspensao";
 
 export default function MotoDetalhes() {
+  
   const params = useParams();
   const nomeMoto = Array.isArray(params.moto) ? params.moto[0] : params.moto; // Garante que seja string
 
@@ -65,18 +71,21 @@ export default function MotoDetalhes() {
       <p className="text-center mt-10 text-red-600">Moto não encontrada.</p>
     );
   }
-
   const especificacoes = {
     motor: {
       motor: motoSelecionada.ficha_tec.motor,
       cilindrada: motoSelecionada.ficha_tec.cilindrada,
       potencia_maxima: motoSelecionada.ficha_tec.potencia_maxima,
       torque_maximo: motoSelecionada.ficha_tec.torque_maximo,
+      relacao_compressao: motoSelecionada.ficha_tec.relacao_compressao,
     },
     transmissao: {
       transmissao: motoSelecionada.ficha_tec.transmissao,
       sistema_partida: motoSelecionada.ficha_tec.sistema_partida,
       diametro_x_curso: motoSelecionada.ficha_tec.diametro_x_curso,
+      ignicao: motoSelecionada.ficha_tec.ignicao,
+    bateria: motoSelecionada.ficha_tec.bateria,
+    farol: motoSelecionada.ficha_tec.farol,
     },
     combustivel: {
       sistema_alimentacao: motoSelecionada.ficha_tec.sistema_alimentacao,
@@ -104,6 +113,7 @@ export default function MotoDetalhes() {
 
   return (
     <div>
+      <WhatsappButton/>
       <HeaderComponent />
 
       <div className="p-6 max-w-4xl mx-auto text-black ">
@@ -144,17 +154,20 @@ export default function MotoDetalhes() {
     ))}
   </div>
 
-  {/* Conteúdo das tabs - Modificado para mobile */}
-  <div className="tab-content">
-    <ul className="mt-2 max-md:grid max-md:grid-cols-2 max-md:gap-x-4 max-md:gap-y-2 max-md:text-sm">
-      {Object.entries(especificacoes[abaAtiva]).map(([chave, valor]) => (
+ {/* Conteúdo das tabs - Modificado para mobile */}
+<div className="tab-content">
+  <ul className="mt-2 max-md:grid max-md:grid-cols-2 max-md:gap-x-4 max-md:gap-y-2 max-md:text-sm">
+    {Object.entries(especificacoes[abaAtiva]).map(([chave, valor]) => (
+      valor ? ( // Verifica se o valor existe
         <li key={chave} className="text-gray-700 max-md:py-1">
           <strong className="max-md:font-bold ">{chave.replace(/_/g, " ")}:</strong>{" "}
           <span className="max-md:text-gray-600">{valor as string}</span>
         </li>
-      ))}
-    </ul>
-  </div>
+      ) : null // Não renderiza nada se o valor for undefined ou null
+    ))}
+  </ul>
+</div>
+
 </div>
 
 

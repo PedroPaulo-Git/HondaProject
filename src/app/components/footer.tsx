@@ -3,10 +3,11 @@ import React from "react";
 const FooterComponent = () => {
   return (
     <section id="footer" className=" text-black ">
-
       <div className=" bg-[#202020] py-16">
         <div className="flex flex-col justify-center items-center text-center space-y-8">
-          <h2 className="text-4xl font-bold text-white">Prêmios Conquistados</h2>
+          <h2 className="text-4xl font-bold text-white">
+            Prêmios Conquistados
+          </h2>
           <ul className="flex mx-auto justify-center space-x-6">
             <li>
               <img
@@ -23,7 +24,6 @@ const FooterComponent = () => {
           </ul>
         </div>
       </div>
-
 
       <div className="px-8 2xl:px-0 ">
         <div className="p-4 pt-14 text-sm w-full lg:text-base sm:w-8/12 md:w-10/12 lg:w-8/12  lg:ml-4">
@@ -45,7 +45,6 @@ const FooterComponent = () => {
             <p className="mb-2">
               Conheça o&nbsp;
               <a
-               
                 target="_blank"
                 className="font-bold text-red-600 hover:underline"
               >
@@ -53,7 +52,6 @@ const FooterComponent = () => {
               </a>
               &nbsp;e o&nbsp;
               <a
-               
                 target="_blank"
                 className="font-bold text-red-600 hover:underline"
               >
@@ -65,7 +63,6 @@ const FooterComponent = () => {
             <p className="mb-2">
               *Para mais detalhes sobre a Garantia Honda, acesse&nbsp;
               <a
-               
                 target="_blank"
                 className="font-bold text-red-600 hover:underline"
               >
@@ -96,24 +93,17 @@ const FooterComponent = () => {
         <div className="flex flex-wrap">
           {/* Social Icons */}
           <div className="w-full border-b-2 border-gray-300 mb-4 lg:border-none md:w-6/12 lg:w-3/12 lg:ml-4 order-1 lg:order-2 ">
-        
             <div className="flex justify-between items-center space-x-4  mb-10 lg:mb-0">
               <a target="_blank">
                 <img className="w-6 h-6" src="/facebook.svg" alt="Facebook" />
               </a>
-              <a
-                target="_blank"
-                
-              >
+              <a target="_blank">
                 <img className="w-6 h-6" src="/instagram.svg" alt="Instagram" />
               </a>
-              <a
-                target="_blank"
-              
-              >
+              <a target="_blank">
                 <img className="w-6 h-6" src="/youtube.svg" alt="Youtube" />
               </a>
-              <a target="_blank" >
+              <a target="_blank">
                 <img className="w-6 h-6" src="/tiktok.svg" alt="TikTok" />
               </a>
             </div>
@@ -154,10 +144,7 @@ const FooterComponent = () => {
 
               {/* Contacts */}
               <div className="hidden lg:flex space-x-6 pb-6">
-                <a
-                  className="flex items-center  font-semibold hover:underline"
-                 
-                >
+                <a className="flex items-center  font-semibold hover:underline">
                   Contato{" "}
                   <img className="ml-2 w-4" src="/arrow-right-red.svg" />
                 </a>
@@ -170,13 +157,16 @@ const FooterComponent = () => {
                 </a>
               </div>
             </div>
-            <div className="my-8 text-sm px-10 text-center ">
-                        <span className="text-[#9B9B9B] ">Copyright © 2025 Potiguar Honda. Todos os direitos reservados.</span>
-                       
-                    </div>
+
+           
           </div>
-         
+          
         </div>
+        <div className="my-8 text-sm px-10 text-center ">
+              <span className="text-[#9B9B9B] ">
+                Copyright © 2025 Potiguar Honda. Todos os direitos reservados.
+              </span>
+            </div>
       </div>
     </section>
   );

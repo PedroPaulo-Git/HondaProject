@@ -7,30 +7,35 @@ import motosData from "../../../public/motos.json";
 
 export default function MotosGrid() {
   interface FichaTecnica {
-    motor: string;
-    cilindrada: string;
-    potencia_maxima: string;
-    torque_maximo: string;
-    transmissao: string;
-    sistema_partida: string;
-    diametro_x_curso: string;
-    sistema_alimentacao: string;
-    combustivel: string;
-    tanque_combustivel: string;
-    oleo_motor: string;
-    dimensoes: string;
-    distancia_entre_eixos: string;
-    distancia_minima_solo: string;
-    altura_assento: string;
-    peso_seco: string;
-    chassi: string;
-    suspensao_dianteira: string;
-    suspensao_traseira: string;
-    freio_dianteiro: string;
-    freio_traseiro: string;
-    pneu_dianteiro: string;
-    pneu_traseiro: string;
+    motor?: string;
+    cilindrada?: string;
+    potencia_maxima?: string;
+    torque_maximo?: string;
+    transmissao?: string;
+    sistema_partida?: string;
+    diametro_x_curso?: string;
+    sistema_alimentacao?: string;
+    combustivel?: string; // Adicionado combustivel, conforme o dado
+    tanque_combustivel?: string;
+    oleo_motor?: string;
+    dimensoes?: string;
+    distancia_entre_eixos?: string;
+    distancia_minima_solo?: string;
+    altura_assento?: string;
+    peso_seco?: string;
+    chassi?: string;
+    suspensao_dianteira?: string;
+    suspensao_traseira?: string;
+    freio_dianteiro?: string;
+    freio_traseiro?: string;
+    pneu_dianteiro?: string;
+    pneu_traseiro?: string;
+    ignicao?: string;  // Agora opcional
+    bateria?: string;   // Agora opcional
+    farol?: string;     // Agora opcional
+    relacao_compressao?: string; // Adicionado relação de compressão
   }
+  
 
   interface Moto {
     id: number;
