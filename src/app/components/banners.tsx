@@ -1,60 +1,64 @@
 'use client';
-
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
-  
 const banners = [
-    '/banner1.jpg',
-  
-    '/banner3.jpg',
-    '/banner4.jpg',// Adicione mais banners conforme necessário  
-    '/banner5.jpg',
-  ];
-  
+  '/banner15.jpg',
+  '/banner7.jpg',
+  '/banner8.jpg',
+  '/banner9.png',
+  '/banner10.jpg',
+  '/banner11.jpg',
+  '/banner12.jpg',
+  '/banner14.jpg',
+  '/banner13.jpg',
+];
+
 export default function BannerCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const carouselRef = useRef<HTMLDivElement | null>(null);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const totalBanners = banners.length;
+  const extendedBanners = [...banners, banners[0]]; // Duplicamos o primeiro no final
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => {
-        if (prevIndex === banners.length - 1) {
-          // Move o último banner para a frente suavemente
-          setTimeout(() => {
-            if (carouselRef.current) {
-              carouselRef.current.style.transition = 'none';
-              setCurrentIndex(0);
-              setTimeout(() => {
-                if (carouselRef.current) {
-                  carouselRef.current.style.transition = 'transform 1s ease-in-out';
-                }
-              }, 50);
-            }
-          }, 700);
-          return prevIndex + 1;
-        }
-        return prevIndex + 1;
-      });
+      setCurrentIndex((prev) => prev + 1);
     }, 4000);
+
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    if (currentIndex === totalBanners) {
+      setTimeout(() => {
+        setIsTransitioning(false); // Remove a transição
+        setCurrentIndex(0);
+      }, 1000); // Aguarda a transição antes de resetar
+
+      setTimeout(() => {
+        setIsTransitioning(true); // Reativa a transição
+      }, 1100);
+    }
+  }, [currentIndex, totalBanners]);
+
   return (
-    <div className="relative w-full overflow-hidden flex justify-end -m-[1px] ">
+    <div className="relative w-full h-[190px] md:h-[400px] lg:h-[600px] overflow-hidden bg-gray-100">
       <div
         ref={carouselRef}
-        className="flex transition-transform duration-1000 ease-in-out"
+        className={`flex h-full ${isTransitioning ? 'transition-transform duration-1000 ease-in-out' : ''}`}
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
-        {banners.concat(banners[0]).map((banner, index) => (
-          <div key={index} className="w-full flex-shrink-0">
+        {extendedBanners.map((banner, index) => (
+          <div key={`${banner}-${index}`} className="relative w-full h-full flex-shrink-0">
             <Image
               src={banner}
               alt={`Banner ${index + 1}`}
-              width={1600}
-              height={800}
-              className="w-screen h-full 2xl:max-h-[600px] lg:max-h-[600px]  2xl:object-fill  "
+              fill
+              priority={index === currentIndex}
+              className="object-fill"
+              sizes="100vw"
+              quality={100}
             />
           </div>
         ))}
@@ -62,4 +66,3 @@ export default function BannerCarousel() {
     </div>
   );
 }
-  
