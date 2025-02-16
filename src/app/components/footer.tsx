@@ -164,7 +164,7 @@ const FooterComponent = () => {
         </div>
         <div className="my-8 text-sm px-10 text-center ">
               <span className="text-[#9B9B9B] ">
-                Copyright © 2025 Potiguar Honda. Todos os direitos reservados.
+                Copyright © 2025 Catalano Motos. Todos os direitos reservados.
               </span>
             </div>
       </div>
