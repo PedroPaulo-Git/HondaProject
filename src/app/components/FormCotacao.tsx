@@ -35,8 +35,11 @@ const FormCotacao = () => {
 
   return (
     <div className="mx-10 mt-5 bg-white lg:absolute lg:top-44 lg:w-[300px] lg:right-0 lg:flex lg:flex-col lg:justify-center ">
-      <div className="h-10 bg-red-500 flex items-center justify-center">
+      <div className="h-16 p-4 bg-red-500 flex flex-col  items-center justify-center">
+
         <p className="font-semibold">Solicitar cotação</p>
+        <p className='text-xs'> Solicite agora e receba as melhores ofertas!</p>
+
       </div>
 
       <form className="max-w-md mx-auto p-4" onSubmit={handleSubmit}>

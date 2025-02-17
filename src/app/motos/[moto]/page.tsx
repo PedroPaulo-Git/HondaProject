@@ -8,6 +8,7 @@ import ImageBannerMoto from "../../../../public/bannerMotopng.jpg";
 import HeaderComponent from "@/app/components/header";
 import FooterComponent from "@/app/components/footer";
 import WhatsappButton from "@/app/components/whatsappButton";
+import BoxWhatsapp from "@/app/components/boxWhatsappMotos";
 import FormCotacao from "@/app/components/FormCotacao";
 interface FichaTecnica {
   motor?: string;
@@ -132,6 +133,7 @@ export default function MotoDetalhes() {
     <FormCotacao/>
 
       <div className="p-6 max-w-4xl mx-auto text-black ">
+      <BoxWhatsapp/>
         <h2 className="text-2xl font-semibold mt-4">
           Versões da {motoSelecionada.nome}
         </h2>
