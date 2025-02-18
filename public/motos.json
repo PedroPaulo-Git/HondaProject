@@ -4,6 +4,7 @@
     "nome": "Pop 110i ES",
     "preco": 9880.68,
     "imagem": "/motos/moto1.png",
+    "tipo": "Street",
     "cores": [
       { "nome": "Branco - Ross White", "color": "bg-gray-200" },
       { "nome": "Preto - Black Storm", "color": "bg-black" },
@@ -40,6 +41,7 @@
     "nome": "Biz 125",
     "preco": 12600.99,
     "imagem": "/motos/moto2.png",
+    "tipo": "Street",
     "cores": [
       { "nome": "Preto - Black Storm", "color": "bg-black" },
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" },
@@ -80,6 +82,7 @@
     "nome": "Elite 125",
     "preco": 12600.99,
     "imagem": "/motos/moto3.png",
+    "tipo": "Street",
     "cores": [
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" },
       { "nome": "Branco - Ross White", "color": "bg-gray-200" },
@@ -117,6 +120,7 @@
     "nome": "PCX 160",
     "preco": 20234.99,
     "imagem": "/motos/moto4.png",
+    "tipo": "Street",
     "cores": [
       { "nome": "Branco - Ross White", "color": "bg-gray-200" },
       { "nome": "Preto - Black Storm", "color": "bg-black" },
@@ -157,6 +161,7 @@
     "nome": "ADV 160",
     "preco": 24534.99,
     "imagem": "/motos/moto5.png",
+    "tipo": "Street",
     "cores": [
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" },
       { "nome": "Prata Metálico - Iron Nail Silver Metallic", "color": "bg-gray-300" }
@@ -194,6 +199,7 @@
     "nome": "CG 160 Cargo",
     "preco": 17430.99,
     "imagem": "/motos/moto6.png",
+    "tipo": "Street",
     "cores": [
       { "nome": "Branco - Ross White", "color": "bg-gray-200" },
       { "nome": "Preto - Black Storm", "color": "bg-black" },
@@ -234,6 +240,7 @@
     "nome": "CG 160 Fan",
     "preco": 17990.99,
     "imagem": "/motos/moto7.png",
+    "tipo": "Street",
     "cores": [
       {
         "nome": "Azul Perolizado - Pearl Spencer Blue",
@@ -276,6 +283,7 @@
     "nome": "CG 160 Start",
     "preco": 16440.99,
     "imagem": "/motos/moto8.png",
+    "tipo": "Street",
     "cores": [
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" },
       { "nome": "Prata Metálico - Iron Nail Silver Metallic", "color": "bg-gray-600" },
@@ -316,6 +324,7 @@
     "nome": "CG 160 Titan",
     "preco": 19520.99,
     "imagem": "/motos/moto9.png",
+    "tipo": "Street",
     "cores": [
       {
         "nome": "Preto Metálico - Infinite Black Metallic",
@@ -359,6 +368,7 @@
     "nome": "NXR 160 Bros",
     "preco": 20900.99,
     "imagem": "/motos/moto10.png",
+    "tipo": "Adventure",
     "cores": [
       { "nome": "Cinza - Tempestade Gray", "color": "bg-gray-800" },
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" }
@@ -397,6 +407,7 @@
     "nome": "XRE 190",
     "preco": 22450.99,
     "imagem": "/motos/moto11.png",
+    "tipo": "Adventure",
     "cores": [
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" },
       { "nome": "Cinza Perolizado – Pearl Stark Gray", "color": "bg-gray-600" },
@@ -441,6 +452,7 @@
     "nome": "CRF 250F",
     "preco": 23390.99,
     "imagem": "/motos/moto12.png",
+    "tipo": "Off Road",
     "cores": [{ "nome": "Vermelho - Racing Red", "color": "bg-red-600" }],
     "ficha_tec": {
       "motor": "OHC, Monocilíndrico, 4 tempos, arrefecido a ar",
@@ -478,6 +490,7 @@
     "nome": "CRF 450",
     "preco": 74878.99,
     "imagem": "/motos/moto13.png",
+    "tipo": "Off Road",
     "cores": [{ "nome": "Vermelho - Racing Red", "color": "bg-red-600" }],
     "ficha_tec": {
       "motor": "Monocilíndrico, quatro tempos, arrefecimento líquido",
@@ -513,6 +526,7 @@
     "nome": "CRF 450R",
     "preco": 74878.99,
     "imagem": "/motos/moto14.png",
+    "tipo": "Off Road",
     "cores": [{ "nome": "Vermelho - Racing Red", "color": "bg-red-600" }],
     "ficha_tec": {
       "motor": "OHC, monocilíndrico, 4 tempos, refrigeração líquida",
@@ -546,6 +560,7 @@
     "nome": "CRF 450RX",
     "preco": 77126.99,
     "imagem": "/motos/moto15.png",
+    "tipo": "Off Road",
     "cores": [{ "nome": "Vermelho - Racing Red", "color": "bg-red-600" }],
     "ficha_tec": {
       "motor": "OHC, monocilíndrico, 4 tempos, refrigeração líquida",
@@ -578,6 +593,7 @@
     "nome": "CB 300 Twister",
     "preco": 24090.99,
     "imagem": "/motos/moto16.png",
+    "tipo": "Street",
     "cores": [
       {
         "nome": "Azul Metálico - Mat Noturno Blue Metallic",
@@ -623,6 +639,7 @@
     "nome": "Sahara 300",
     "preco": 29580.99,
     "imagem": "/motos/moto17.png",
+    "tipo": "Adventure",
     "cores": [{ "nome": "Branco - Original", "color": "bg-gray-200" }],
     "ficha_tec": {
       "motor": "DOHC, Monocilíndrico, 4 tempos, arrefecido a ar",
@@ -656,6 +673,7 @@
     "nome": "XR 300L Tornado",
     "preco": 29070.99,
     "imagem": "/motos/moto18.png",
+    "tipo": "Adventure",
     "cores": [
       { "nome": "Branco - Ross White", "color": "bg-gray-200" },
       { "nome": "Preto - Black Storm", "color": "bg-black" },
@@ -681,6 +699,7 @@
     "nome": "CB 500F",
     "preco": 40660.99,
     "imagem": "/motos/moto19.png",
+    "tipo": "Street",
     "cores": [
       {
         "nome": "Azul Perolizado - Pearl Spencer Blue",
@@ -720,6 +739,7 @@
     "nome": "CB 500X",
     "preco": 43260.99,
     "imagem": "/motos/moto20.png",
+    "tipo": "Adventure",
     "cores": [
       { "nome": "Branco - Ross White", "color": "bg-gray-200" },
       { "nome": "Preto - Black Storm", "color": "bg-black" },
@@ -757,6 +777,7 @@
     "nome": "NC 750X",
     "preco": 53730.99,
     "imagem": "/motos/moto21.png",
+    "tipo": "Adventure",
     "cores": [
       { "nome": "Vermelho – Victory Red", "color": "bg-red-600" },
       { "nome": "Verde – Mat Hunter Green", "color": "bg-green-700" },
@@ -793,6 +814,7 @@
     "nome": "CB 650R",
     "preco": 52590.99,
     "imagem": "/motos/moto22.png",
+    "tipo": "Street",
     "cores": [
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" },
       {
@@ -832,6 +854,7 @@
     "nome": "CBR 650R",
     "preco": 55360.99,
     "imagem": "/motos/moto23.png",
+    "tipo": "Sport",
     "cores": [
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" },
       { "nome": "Branco Perolizado – Pearl Andes White", "color": "bg-white" }
@@ -867,6 +890,7 @@
     "nome": "CB 1000R",
     "preco": 78870.99,
     "imagem": "/motos/moto24.png",
+    "tipo": "Street",
     "cores": [
       { "nome": "Vermelho - Racing Red", "color": "bg-red-700" },
       { "nome": "Preto - Black Storm", "color": "bg-black" }
@@ -902,6 +926,7 @@
     "nome": "CB 1000R Black Edition",
     "preco": 87730.99,
     "imagem": "/motos/moto25.png",
+    "tipo": "Street",
     "cores": [
       { "nome": "Azul Fosco – Mat Jeans Blue Metallic", "color": "bg-bluedark-800" }
     ],
@@ -936,6 +961,7 @@
     "nome": "CRF 1100L Africa Twin",
     "preco": 81100.99,
     "imagem": "/motos/moto26.png",
+    "tipo": "Adventure",
     "cores": [{ "nome": "Branco - Original", "color": "bg-gray-200" }],
     "ficha_tec": {
       "motor": "OHC, 2 cilindros, 4 tempos, arrefecimento líquido",
@@ -967,6 +993,7 @@
     "nome": "CRF 1100L Africa Twin Adventure Sports",
     "preco": 102130.99,
     "imagem": "/motos/moto27.png",
+    "tipo": "Adventure",
     "cores": [{ "nome": "Branco - Original", "color": "bg-gray-200" }],
     "ficha_tec": {
       "motor": "OHC, 2 cilindros, 4 tempos, arrefecimento líquido",
@@ -998,6 +1025,7 @@
     "nome": "TRX 420 FourTrax",
     "preco": 52500.99,
     "imagem": "/motos/moto28.png",
+    "tipo": "Off Road",
     "cores": [
       { "nome": "Verde - Adventure Green", "color": "bg-green-700" },
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" }

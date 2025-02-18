@@ -52,19 +52,23 @@ export default function MotosGrid() {
     const nomeFormatado = nome.toLowerCase().replace(/\s+/g, "-");
     router.push(`/motos/${nomeFormatado}`);
   };
-  const categorias = ["Todos", "Custom", "Trail", "Scooter"];
+  const categorias = ["Todos", "Street", "Adventure", "Off Road","Sport"];
   const [categoriaAtiva, setCategoriaAtiva] = useState("Todos");
   useEffect(() => {
-    setMotos(motosData);
-  }, []);
-
+    if (categoriaAtiva === "Todos") {
+      setMotos(motosData);
+    } else {
+      setMotos(motosData.filter(moto => moto.tipo === categoriaAtiva));
+    }
+  }, [categoriaAtiva]);
+  
   return (
     <div id="motos" className="px-10 mx-0 py-16 lg:px-20  bg-gray-200">
       <div className="flex items-center ">
         <span className="w-6 h-0.5 bg-red-600">
 
         </span>
-  <h1 className="font-bold text-black text-3xl lg:text-4xl ml-2">
+  <h1 className="font-bold text-gray-700 text-3xl lg:text-4xl ml-2">
         Nossos Veículos
       </h1>
 
