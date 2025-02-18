@@ -252,7 +252,7 @@ export default function MotoDetalhes() {
               <div>
                 <a
                 onClick={handleInteresse}
-                  className="w-full bg-red-700 flex justify-center p-3 text-sm text-white font-semibold mt-4"
+                  className=" cursor-pointer w-full bg-red-700 flex justify-center p-3 text-sm text-white font-semibold mt-4"
                 
                 >
                   Tenho interesse
