@@ -9,7 +9,7 @@ import HeaderComponent from "@/app/components/header";
 import FooterComponent from "@/app/components/footer";
 import WhatsappButton from "@/app/components/whatsappButton";
 import BoxWhatsapp from "@/app/components/boxWhatsappMotos";
-import FormCotacao from "@/app/components/FormCotacao";
+//import FormCotacao from "@/app/components/FormCotacao";
 interface FichaTecnica {
   motor?: string;
   cilindrada?: string;
@@ -46,6 +46,7 @@ interface Moto {
   preco: number;
   imagem: string;
   ficha_tec: FichaTecnica;
+  cores?: { name: string; color: string}[];
 }
 
 type Aba = "motor" | "transmissao" | "combustivel" | "dimensoes" | "suspensao";
@@ -56,23 +57,52 @@ export default function MotoDetalhes() {
 
   const [motoSelecionada, setMotoSelecionada] = useState<Moto | null>(null);
   const [abaAtiva, setAbaAtiva] = useState<Aba>("motor");
-
+  // const colors = [
+  //   { name: "Laranja - Beduin Orange", color: "bg-orange-500" },
+  //   { name: "Branco - Ross White", color: "bg-gray-300" },
+  //   { name: "Preto - Black Storm", color: "bg-black" },
+  //   { name: "Vermelho - Racing Red", color: "bg-red-600" },
+  // ];
+  
+  const [selectedColor, setSelectedColor] = useState<{ name: string; color: string } | null>(null);
   useEffect(() => {
     if (!nomeMoto) return;
-
+  
     const motoEncontrada = motosData.find(
-      (m: Moto) =>
-        m.nome.toLowerCase().replace(/\s+/g, "-") === nomeMoto.toLowerCase()
+      (m) => m.nome.toLowerCase().replace(/\s+/g, "-") === nomeMoto.toLowerCase()
     );
-
-    setMotoSelecionada(motoEncontrada || null);
+  
+    if (motoEncontrada) {
+      setMotoSelecionada({
+        ...motoEncontrada,
+        cores: motoEncontrada.cores?.map(cor => ({
+          name: cor.nome, 
+          color: cor.color, 
+          // imagem: cor.imagem || ""
+        })) || []
+      });
+  
+      // Definir a primeira cor como selecionada
+      if (motoEncontrada.cores && motoEncontrada.cores.length > 0) {
+        setSelectedColor({
+          name: motoEncontrada.cores[0].nome,
+          color: motoEncontrada.cores[0].color,
+          // imagem: motoEncontrada.cores[0].imagem || ""
+        });
+      }
+    } else {
+      setMotoSelecionada(null);
+      setSelectedColor(null);
+    }
   }, [nomeMoto]);
+  
 
   if (!motoSelecionada) {
     return (
       <p className="text-center mt-10 text-red-600">Moto não encontrada.</p>
     );
   }
+
   const especificacoes = {
     motor: {
       motor: motoSelecionada.ficha_tec.motor,
@@ -130,25 +160,95 @@ export default function MotoDetalhes() {
           className="w-32 top-0 max-w-md mx-auto absolute sm:top-3 sm:w-72 lg:w-full sm:left-14 2xl:top-28 2xl:left-48"
         />
       </div>
-    <FormCotacao/>
+      {/* <FormCotacao/> */}
 
-      <div className="p-6 max-w-4xl mx-auto text-black ">
-      <BoxWhatsapp/>
-        <h2 className="text-2xl font-semibold mt-4">
-          Versões da {motoSelecionada.nome}
-        </h2>
+      <div className="p-6 mt-20 max-w-4xl mx-auto text-black ">
+        <div className="flex flex-col justify-center items-center">
+          <h1 className="text-4xl font-thin text-gray-800">
+            Escolha a{" "}
+            <span className="font-semibold">{motoSelecionada.nome}</span> que{" "}
+            <span className="font-semibold">combina com você</span>
+          </h1>
 
-        <div className="w-52 items-center text-center mb-10">
-          <img
-            src={motoSelecionada.imagem}
-            alt={motoSelecionada.nome}
-            className="w-full mt-6"
-          />
-          <h3 className="text-lg text-black font-semibold mx-auto ">
-            {motoSelecionada.nome}
-          </h3>
+          <div className="containerDetailsMoto border-2 border-gray-200 mt-10 w-[35%] flex flex-col shadow-xl p-4 py-6 relative">
+            <span className="absolute right-0 top-0 p-2 bg-red-700 text-white text-xs ">
+              DESTAQUE
+            </span>
+            <h2 className="text-xl font-semibold ">{motoSelecionada.nome}</h2>
+
+            <div className="w-full items-center text-center mb-2">
+              <img
+                src={motoSelecionada.imagem}
+                alt={motoSelecionada.nome}
+                className="w-full mt-6"
+              />
+                {motoSelecionada.cores && (
+                <div>
+                  <p className="text-left text-xs text-gray-500 mb-1">{selectedColor?.name}</p>
+                  <div className="flex gap-2 items-center mb-4">
+                    {motoSelecionada.cores.map((c, index) => (
+                      <span
+                        key={index}
+                        className={`p-[1px] rounded-full cursor-pointer ${selectedColor?.color === c.color ? "border-2 border-gray-400" : "border-2 "}`}
+                        onClick={() => setSelectedColor(c)}
+                      >
+                        <div className={`w-10 h-10 rounded-full ${c.color}`}></div>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              <div className="text-left text-sm flex flex-col  space-y-1">
+                <div className="flex flex-wrap">
+                  <p className="font-bold inline">Potência Máxima:</p>
+                  <span className="inline-block">
+                    {motoSelecionada.ficha_tec.potencia_maxima}
+                  </span>
+                </div>
+                <div className="flex flex-wrap">
+                  <p className="font-bold inline">Torque Máximo:</p>
+                  <span className="inline-block">
+                    {motoSelecionada.ficha_tec.torque_maximo}
+                  </span>
+                </div>
+                <div className="flex flex-wrap">
+                  <p className="font-bold inline">Combustível:</p>
+                  <span className="inline-block">
+                    {motoSelecionada.ficha_tec.combustivel}
+                  </span>
+                </div>
+              </div>
+
+              <div
+                className="pt-6 pb-2  text-left"
+                data-product-key="Branco - Ross White - 1 -"
+              >
+                <p className="text-sm text-gray-600">A partir de</p>
+                <div className="flex items-baseline">
+                  <sup className="text-xs text-gray-500">R$</sup>
+                  <strong className="text-2xl font-bold">
+  {motoSelecionada.preco.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}*
+</strong>
+
+
+                </div>
+                <div className="text-xs text-gray-500">
+                  <span>Preço público sugerido. Frete não incluso.</span>
+                </div>
+              </div>
+
+              <div>
+                <a
+                  className="w-full bg-red-700 flex justify-center p-3 text-sm text-white font-semibold mt-4"
+                  href=""
+                >
+                  Tenho interesse
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-
+        <BoxWhatsapp />
         <div className="bg-white p-5">
           {/* Tabs - Modificado para mobile */}
           <div className="tabs flex mb-4 justify-center max-md:grid max-md:grid-cols-2 max-md:gap-2 max-md:space-x-0 space-x-5 font-semibold border-b-2 max-md:pb-3 ">
