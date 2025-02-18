@@ -5,7 +5,7 @@
     "preco": 9880.68,
     "imagem": "/motos/moto1.png",
     "cores": [
-      { "nome": "Branco - Ross White", "color": "bg-gray-300" },
+      { "nome": "Branco - Ross White", "color": "bg-gray-200" },
       { "nome": "Preto - Black Storm", "color": "bg-black" },
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" }
     ],
@@ -43,7 +43,7 @@
     "cores": [
       { "nome": "Preto - Black Storm", "color": "bg-black" },
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" },
-      { "nome": "Branco - Ross White", "color": "bg-gray-300" }
+      { "nome": "Branco - Ross White", "color": "bg-gray-200" }
     ],
     "ficha_tec": {
       "motor": "OHC, Monocilíndrico 4 tempos, arrefecido a ar",
@@ -82,7 +82,7 @@
     "imagem": "/motos/moto3.png",
     "cores": [
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" },
-      { "nome": "Branco - Ross White", "color": "bg-gray-300" },
+      { "nome": "Branco - Ross White", "color": "bg-gray-200" },
       { "nome": "Preto - Black Storm", "color": "bg-black" }
     ],
     "ficha_tec": {
@@ -118,7 +118,7 @@
     "preco": 20234.99,
     "imagem": "/motos/moto4.png",
     "cores": [
-      { "nome": "Branco - Ross White", "color": "bg-gray-300" },
+      { "nome": "Branco - Ross White", "color": "bg-gray-200" },
       { "nome": "Preto - Black Storm", "color": "bg-black" },
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" }
     ],
@@ -195,7 +195,7 @@
     "preco": 17430.99,
     "imagem": "/motos/moto6.png",
     "cores": [
-      { "nome": "Branco - Ross White", "color": "bg-gray-300" },
+      { "nome": "Branco - Ross White", "color": "bg-gray-200" },
       { "nome": "Preto - Black Storm", "color": "bg-black" },
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" }
     ],
@@ -237,7 +237,7 @@
     "cores": [
       {
         "nome": "Azul Perolizado - Pearl Spencer Blue",
-        "color": "bg-blue-600"
+        "color": "bg-blue-800"
       },
       { "nome": "Preto - Black Storm", "color": "bg-black" },
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" }
@@ -278,7 +278,7 @@
     "imagem": "/motos/moto8.png",
     "cores": [
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" },
-      { "nome": "Prata Metálico - Iron Nail Silver Metallic", "color": "bg-gray-500" },
+      { "nome": "Prata Metálico - Iron Nail Silver Metallic", "color": "bg-gray-600" },
       { "nome": "Preto - Black Storm", "color": "bg-black" }
 
     ],
@@ -360,7 +360,7 @@
     "preco": 20900.99,
     "imagem": "/motos/moto10.png",
     "cores": [
-      { "nome": "Branco - Ross White", "color": "bg-gray-800" },
+      { "nome": "Cinza - Tempestade Gray", "color": "bg-gray-800" },
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" }
     ],
     "ficha_tec": {
@@ -402,7 +402,7 @@
       { "nome": "Cinza Perolizado – Pearl Stark Gray", "color": "bg-gray-600" },
       {
         "nome": "Azul Metálico - Mat Noturno Blue Metallic",
-        "color": "bg-[#38496C]"
+       "color": "bg-blue-800"
       }
     ],
     "ficha_tec": {
@@ -581,7 +581,7 @@
     "cores": [
       {
         "nome": "Azul Metálico - Mat Noturno Blue Metallic",
-        "color": "bg-[#f2f2f2]"
+       "color": "bg-blue-800"
       },
       {
         "nome": "Vermelho Metálico - Pearl Royalty Red",
@@ -623,7 +623,7 @@
     "nome": "Sahara 300",
     "preco": 29580.99,
     "imagem": "/motos/moto17.png",
-    "cores": [{ "nome": "Branco - Original", "color": "bg-gray-300" }],
+    "cores": [{ "nome": "Branco - Original", "color": "bg-gray-200" }],
     "ficha_tec": {
       "motor": "DOHC, Monocilíndrico, 4 tempos, arrefecido a ar",
       "cilindrada": "293,5 cc",
@@ -657,7 +657,7 @@
     "preco": 29070.99,
     "imagem": "/motos/moto18.png",
     "cores": [
-      { "nome": "Branco - Ross White", "color": "bg-gray-300" },
+      { "nome": "Branco - Ross White", "color": "bg-gray-200" },
       { "nome": "Preto - Black Storm", "color": "bg-black" },
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" }
     ],
@@ -684,7 +684,7 @@
     "cores": [
       {
         "nome": "Azul Perolizado - Pearl Spencer Blue",
-        "color": "bg-blue-600"
+        "color": "bg-blue-800"
       },
       { "nome": "Cinza Perolizado – Pearl Stark Gray", "color": "bg-gray-600" },
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" }
@@ -721,7 +721,7 @@
     "preco": 43260.99,
     "imagem": "/motos/moto20.png",
     "cores": [
-      { "nome": "Branco - Ross White", "color": "bg-gray-300" },
+      { "nome": "Branco - Ross White", "color": "bg-gray-200" },
       { "nome": "Preto - Black Storm", "color": "bg-black" },
       { "nome": "Vermelho - Racing Red", "color": "bg-red-600" }
     ],
@@ -760,7 +760,7 @@
     "cores": [
       { "nome": "Vermelho – Victory Red", "color": "bg-red-600" },
       { "nome": "Verde – Mat Hunter Green", "color": "bg-green-700" },
-      { "nome": "Azul Perolizado - Pearl Spencer Blue", "color": "bg-blue-800" }
+      { "nome": "Azul Perolizado - Pearl Spencer Blue",  "color": "bg-blue-800" }
     ],
     "ficha_tec": {
       "motor": "OHC, 2 cilindros, 4 tempos, arrefecimento líquido",
@@ -903,9 +903,7 @@
     "preco": 87730.99,
     "imagem": "/motos/moto25.png",
     "cores": [
-      { "nome": "Branco - Ross White", "color": "bg-gray-300" },
-      { "nome": "Preto - Black Storm", "color": "bg-black" },
-      { "nome": "Vermelho - Racing Red", "color": "bg-red-600" }
+      { "nome": "Azul Fosco – Mat Jeans Blue Metallic", "color": "bg-bluedark-800" }
     ],
     "ficha_tec": {
       "motor": "OHC, Monocilíndrico, 4 tempos, arrefecido a ar",
@@ -938,7 +936,7 @@
     "nome": "CRF 1100L Africa Twin",
     "preco": 81100.99,
     "imagem": "/motos/moto26.png",
-    "cores": [{ "nome": "Branco - Original", "color": "bg-gray-300" }],
+    "cores": [{ "nome": "Branco - Original", "color": "bg-gray-200" }],
     "ficha_tec": {
       "motor": "OHC, 2 cilindros, 4 tempos, arrefecimento líquido",
       "cilindrada": "1.084 cc",
@@ -969,7 +967,7 @@
     "nome": "CRF 1100L Africa Twin Adventure Sports",
     "preco": 102130.99,
     "imagem": "/motos/moto27.png",
-    "cores": [{ "nome": "Branco - Original", "color": "bg-gray-300" }],
+    "cores": [{ "nome": "Branco - Original", "color": "bg-gray-200" }],
     "ficha_tec": {
       "motor": "OHC, 2 cilindros, 4 tempos, arrefecimento líquido",
       "cilindrada": "1.084 cc",

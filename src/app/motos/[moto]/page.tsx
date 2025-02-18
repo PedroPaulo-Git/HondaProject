@@ -142,7 +142,19 @@ export default function MotoDetalhes() {
       pneu_traseiro: motoSelecionada.ficha_tec.pneu_traseiro,
     },
   };
-
+  const handleInteresse = () => {
+    if (!motoSelecionada) return;
+  
+    const nome = motoSelecionada.nome;
+    const preco = motoSelecionada.preco.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+    const cor = selectedColor ? selectedColor.name : "Não especificado";
+  
+    const mensagem = `Olá, tenho interesse na moto ${nome}. Preço: ${preco}. Cor: ${cor}.`;
+    const url = `https://wa.me/5581999049803?text=${encodeURIComponent(mensagem)}`;
+  
+    window.open(url, "_blank");
+  };
+  
   return (
     <div>
       <WhatsappButton />
@@ -239,8 +251,9 @@ export default function MotoDetalhes() {
 
               <div>
                 <a
+                onClick={handleInteresse}
                   className="w-full bg-red-700 flex justify-center p-3 text-sm text-white font-semibold mt-4"
-                  href=""
+                
                 >
                   Tenho interesse
                 </a>
