@@ -59,7 +59,7 @@ export default function MotosGrid() {
   }, []);
 
   return (
-    <div className="px-10 mx-0 py-16 lg:px-20  bg-gray-200">
+    <div id="motos" className="px-10 mx-0 py-16 lg:px-20  bg-gray-200">
       <div className="flex items-center ">
         <span className="w-6 h-0.5 bg-red-600">
 

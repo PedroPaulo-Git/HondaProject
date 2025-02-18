@@ -61,7 +61,13 @@ const HeaderComponent = () => {
                         className="mr-auto text-3xl font-bold leading-none"
                         href="#"
                       >
-                     
+                   
+              <img
+
+                src="/LogoToWhite.png"
+                className="-my-6 -ml-14 z-0"
+              />
+             
                       </Link>
                       <button
                         className="navbar-close"
@@ -87,44 +93,29 @@ const HeaderComponent = () => {
                       <ul>
                         <li className="mb-1">
                           <Link
-                            className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                            href="#"
+                            className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-red-600 rounded"
+                            href="#motos"
                           >
-                            Contato
+                             Ver Motos
                           </Link>
                         </li>
                         <li className="mb-1">
                           <Link
-                            className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                            href="#"
+                            className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-red-600 rounded"
+                             href="#motos"
                           >
-                            Ver Motos
+                           Contato
                           </Link>
                         </li>
                         <li className="mb-1">
                           <Link
-                            className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                            href="#"
+                            className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-red-600 rounded"
+                             href="#motos"
                           >
                             Sobre
                           </Link>
                         </li>
-                        <li className="mb-1">
-                          <Link
-                            className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                            href="#"
-                          >
-                            Pricing
-                          </Link>
-                        </li>
-                        <li className="mb-1">
-                          <Link
-                            className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                            href="#"
-                          >
-                            Contact
-                          </Link>
-                        </li>
+                       
                       </ul>
                     </div>
            
@@ -136,7 +127,7 @@ const HeaderComponent = () => {
             <div className=" items-center gap-4 hidden md:flex">
               <Link
                href="http://wa.me/5581999049803?text=Gostaria%20de%20entrar%20em%20contato%20!"
-                className="inline-flex text-white items-center justify-center gap-1.5 rounded-sm border border-black bg-red-600 px-5 py-3 transition hover:text-gray-700 focus:ring-3 focus:outline-hidden"
+                className="inline-flex text-white items-center justify-center gap-1.5 rounded-sm border  bg-red-600 px-5 py-3 hover:bg-red-700 transition-all focus:ring-3 focus:outline-hidden"
                 type="button"
               >
                 <FaPhone />

@@ -8,6 +8,7 @@ import ImageBannerMoto from "../../../../public/bannerMotopng.jpg";
 import HeaderComponent from "@/app/components/header";
 import FooterComponent from "@/app/components/footer";
 import WhatsappButton from "@/app/components/whatsappButton";
+import FichaTecButton from "@/app/components/buttonVerFichaTecnica";
 import BoxWhatsapp from "@/app/components/boxWhatsappMotos";
 //import FormCotacao from "@/app/components/FormCotacao";
 interface FichaTecnica {
@@ -174,15 +175,16 @@ export default function MotoDetalhes() {
       </div>
       {/* <FormCotacao/> */}
 
-      <div className="p-6 mt-20 max-w-4xl mx-auto text-black ">
-        <div className="flex flex-col justify-center items-center">
+      <div className="p-6 mt-20 lg:max-w-4xl mx-auto text-black ">
+        <div className="flex flex-col justify-center items-center text-center">
           <h1 className="text-4xl font-thin text-gray-800">
             Escolha a{" "}
             <span className="font-semibold">{motoSelecionada.nome}</span> que{" "}
             <span className="font-semibold">combina com você</span>
           </h1>
 
-          <div className="containerDetailsMoto border-2 border-gray-200 mt-10 w-[35%] flex flex-col shadow-xl p-4 py-6 relative">
+          <div className="containerDetailsMoto border-2 border-gray-200 
+          mt-10 sm:w-[35%] flex flex-col shadow-xl p-4 py-6 relative">
             <span className="absolute right-0 top-0 p-2 bg-red-700 text-white text-xs ">
               DESTAQUE
             </span>
@@ -261,8 +263,9 @@ export default function MotoDetalhes() {
             </div>
           </div>
         </div>
-        <BoxWhatsapp />
-        <div className="bg-white p-5">
+        <FichaTecButton/>
+        <BoxWhatsapp  />
+        <div  className="bg-white p-5">
           {/* Tabs - Modificado para mobile */}
           <div className="tabs flex mb-4 justify-center max-md:grid max-md:grid-cols-2 max-md:gap-2 max-md:space-x-0 space-x-5 font-semibold border-b-2 max-md:pb-3 ">
             {[
@@ -287,7 +290,7 @@ export default function MotoDetalhes() {
           </div>
 
           {/* Conteúdo das tabs - Modificado para mobile */}
-          <div className="tab-content">
+          <div  className="tab-content">
             <ul className="mt-2 max-md:grid max-md:grid-cols-2 max-md:gap-x-4 max-md:gap-y-2 max-md:text-sm">
               {Object.entries(especificacoes[abaAtiva]).map(
                 ([chave, valor]) =>
