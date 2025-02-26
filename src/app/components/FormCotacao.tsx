@@ -28,7 +28,7 @@ const FormCotacao = () => {
 
     const whatsappMessage = `Nome: ${encodeURIComponent(name)}%0ATelefone: ${encodeURIComponent(phone)}%0AMensagem: ${encodeURIComponent(message)}`;
 
-    const whatsappUrl = `https://wa.me/558199049803?text=${whatsappMessage}`;
+    const whatsappUrl = `https://wa.me/5543991543136?text=${whatsappMessage}`;
 
     window.open(whatsappUrl, '_blank');
   };
