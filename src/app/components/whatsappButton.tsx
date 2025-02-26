@@ -7,7 +7,7 @@ const WhatsappButton = () => {
         transition-all flex justify-center text-3xl
          m-6 rounded-full items-center w-12 h-12 
          bg-green-500 fixed bottom-0 z-10 right-0 ' 
-         href="http://wa.me/5581999049803?text=Gostaria%20de%20entrar%20em%20contato%20!">
+         href="http://wa.me/5543991543136?text=Gostaria%20de%20entrar%20em%20contato%20!">
         <IoLogoWhatsapp />
         
         </a>

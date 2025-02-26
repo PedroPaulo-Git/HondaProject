@@ -43,7 +43,7 @@ const HeaderComponent = () => {
             <span className="flex items-center gap-2 mr-4 sm:hidden">
               <IoLogoWhatsapp className="text-green-500 text-2xl" />
               <Link
-                href="/servicos"
+                href="http://wa.me/5543991543136?text=Gostaria%20de%20entrar%20em%20contato%20!"
                 id="btn-agendar"
                 className="bg-red-500 text-white px-4 text-sm py-1 rounded-3xl"
               >
