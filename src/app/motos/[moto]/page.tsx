@@ -151,9 +151,8 @@ export default function MotoDetalhes() {
     const cor = selectedColor ? selectedColor.name : "Não especificado";
   
     const mensagem = `Olá, tenho interesse na moto ${nome}. Preço: ${preco}. Cor: ${cor}.`;
-    const url = `https://wa.me/5581999049803?text=${encodeURIComponent(mensagem)}`;
-  
-    window.open(url, "_blank");
+    const url = `https://wa.me/5543991543136?text=${encodeURIComponent(mensagem)}`;
+     window.open(url, "_blank");
   };
   
   return (
